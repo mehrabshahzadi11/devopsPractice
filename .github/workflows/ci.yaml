@@ -1,21 +1,21 @@
-name: devop-workflow
+name: ci-workflow
 on:
   push:
     branches:
-      - develop
+        - develop
   pull_request:
     branches:
-      - develop
+        - develop
 jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Welcome step
-        run: echo "Welcome to github actions"
+      - name: Welcome Step
+        run: echo "wecome to GitHub Actions"
       - name: Checkout Repository
-        uses: echo actions/checkout@v4
-      - name: Basic Info
-        run: |
-          echo "Repositry name is:${{github.repository}}"
-          echo "Repository Owner is: ${{github.owner}}"
-          echo "Event Name: ${{github.event}}"
+        uses: actions/checkout@v4
+      - name: Repository Basic Info
+        run: | 
+          echo "Reopository Name: ${{github.repository}}"
+          echo "Repository Owner: ${{github.owner}}"
+          echo "Event NAME: ${{github.event}}"
